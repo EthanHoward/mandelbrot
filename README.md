@@ -7,8 +7,7 @@ This is generated with the ColorScheme as ColorScheme.inferno (supplied in funct
 ![ColorScheme.inferno](https://raw.githubusercontent.com/EthanHoward/mandelbrot/master/img/1000x600/KjoSgm.bmp)
 
 This is generated with the ColorScheme as ColorScheme.summer (supplied in function call)
-![ColorScheme.summer](https://raw.githubusercontent.com/EthanHoward/mandelbrot/master/img/1000x600/njZLr.bmp)
-
+![ColorScheme.summer](https://raw.githubusercontent.com/EthanHoward/mandelbrot/master/img/1000x600/njZLrZ.bmp)
 
 This is generated with the ColorScheme as ColorScheme.spring (supplied in function call)
 ![ColorScheme.spring](https://raw.githubusercontent.com/EthanHoward/mandelbrot/master/img/1000x600/BmyTdc.bmp)
