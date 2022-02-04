@@ -64,6 +64,9 @@ function mandelbrot_plot(width, height, cscheme)
   save("img/$w$xby$h/$fname.bmp", colorview(RGB, image))
 end
 
+# EXAMPLE FUNCTION CALL 
+# mandelbrot_plot([width], [height], ColorScheme.[somecolorscheme] )
+# 
 # mandelbrot_plot(3840, 2160, ColorSchemes.inferno);       # KjoSgm
 # mandelbrot_plot(3840, 2160, ColorSchemes.summer);        # njZLrZ
 # mandelbrot_plot(3840, 2160, ColorSchemes.spring);        # BmyTdc
@@ -73,5 +76,3 @@ end
 # mandelbrot_plot(3840, 2160, ColorSchemes.nipy_spectral); # Yf6JJX
 # mandelbrot_plot(3840, 2160, ColorSchemes.prism);         # wKXyWq
 # mandelbrot_plot(3840, 2160, ColorSchemes.hot);           # rKhYB1
-
-mandelbrot_plot(1000, 600, ColorSchemes.hot);
