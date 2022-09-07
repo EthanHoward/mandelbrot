@@ -3,7 +3,7 @@ Generates mandelbrot fractals using z = z^2 + c where c is a complex
 ---
 All Below images are 1000x600 resolution and at max_steps = 50 - ln26
 ## They CAN be generated at higher resolutions (e.g 3840x2160) by supplying these in the function call
-## Changing max_steps will render the image more but decrease the amount of flared colours, tinker with it to find the best "combo"
+## Changing max_steps will render the image more (increases iterations) but decrease the amount of flared colours, tinker with it to find the best set of variables for you.
 ---
 This is generated with the ColorScheme as ColorScheme.inferno (supplied in function call)
 ![ColorScheme.inferno](https://raw.githubusercontent.com/EthanHoward/mandelbrot/master/img/1000x600/KjoSgm.bmp)
