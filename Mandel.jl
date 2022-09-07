@@ -16,6 +16,18 @@ function get_steps(c::Complex, iterations)
   return iterations + 1
 end
 
+function julia(x, y, width, height, c, iterations)
+  # bit of trial and error here for the scale
+  z = ((y/width)*2.7 - 1.3) + ((x/height)*4.5 - 2.5)im
+  for i = 1:iterations
+      z = z^2 + c
+      if abs(z) >= 2
+          return i
+      end
+  end
+  return iterations + 1
+end
+
 function get_color(colorscheme, step, iterations)
   if step == iterations+1
       return [0.0, 0.0, 0.0]
@@ -87,7 +99,8 @@ function mandelbrot_plot(crmn=-2.5, crmx=1.5, cimn=-1.2, width=500, height=300, 
 
   cu_complexes = CuArray(complexes)
 
-  cu_steps .= get_steps.(cu_complexes, iterations)
+  cu_steps .= get_steps.(cu_complexes, iterations, 0.00000000, 0.000000000000)
+
 
   synchronize()
 
@@ -107,7 +120,7 @@ end
 
 
 
-mandelbrot_plot(-0.2834, -0.6, 0.35 ,1500, 900, ColorSchemes.inferno)
+# mandelbrot_plot(-0.2834, -0.6, 0.35 ,1500, 900, ColorSchemes.inferno)
 
 # mandelbrot_plot(-2.5, -1.5, -1.2, 1000, 600, ColorSchemes.inferno)
 
@@ -135,7 +148,7 @@ mandelbrot_plot(-0.2834, -0.6, 0.35 ,1500, 900, ColorSchemes.inferno)
 
 # mandelbrot_plot(-0.7491597623, -0.7491597623 + 0.0000000004, 0.1005089256, 3840, 2160, ColorSchemes.prism)
 # mandelbrot_plot(-0.602500000000000000000000000009, -0.702500000000000000000000000009, -0.350000000000000000000000000009, 1500, 900, ColorSchemes.hot)
-# mandelbrot_plot(-1.15, -1.1, -0.25, 3840, 2160, ColorSchemes.inferno)
+mandelbrot_plot(-1.15, -1.1, -0.25, 3840 * 1.25, 2160 * 1.25, ColorSchemes.inferno);
 # mandelbrot_plot(-1.1058045574565, -1.038571685831, -0.25, 3840, 2160, ColorSchemes.prism)
 
 # SEE
